@@ -1381,7 +1381,9 @@ def footer():
 
 
 def main():
+    st.title("")
     header()
+
     st.title("Quantum Key Distribution (BB84) Simulator")
     current_page = sidebar_nav()
     # Page routing
