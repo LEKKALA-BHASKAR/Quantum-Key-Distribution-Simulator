@@ -18,23 +18,10 @@ except Exception:
 
 
 st.set_page_config(
-    page_title="BB84 Quantum Key Distribution Simulator",
-    page_icon="🔐",
+    page_title="Quantum Key Distribution Simulator",
+    page_icon="🔑",
     layout="wide",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://quantum-computing.ibm.com/',
-        'Report a bug': "https://github.com/your-repo/issues",
-        'About': """
-        # BB84 Quantum Key Distribution Simulator
-        
-        An interactive educational tool demonstrating quantum cryptography principles 
-        using the BB84 protocol. Developed for the Amaravati Quantum Valley Hackathon 2025.
-        
-        **Version:** 1.0.0  
-        **License:** MIT  
-        """
-    }
+    initial_sidebar_state="expanded"
 )
 
 
