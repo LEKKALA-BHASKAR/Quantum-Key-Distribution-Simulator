@@ -43,151 +43,151 @@ st.set_page_config(
 st.markdown(
     """
 <style>
-    /* Base styling */
-    .main > div {
-        padding-top: 1.5rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    
-    /* Gradient background with subtle animation */
-    .stApp {
-        background: radial-gradient(1200px 800px at 10% -20%, rgba(238, 242, 255, 0.8) 0%, transparent 60%),
-                    radial-gradient(1400px 900px at 110% 10%, rgba(245, 243, 255, 0.8) 0%, transparent 60%);
-        background-attachment: fixed;
-        animation: gradientShift 20s ease infinite alternate;
-    }
-    
-    @keyframes gradientShift {
-        0% { background-position: 0% 0%, 100% 100%; }
-        100% { background-position: 10% 10%, 90% 90%; }
-    }
-    
-    /* Header styling */
-    .app-header {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        margin-bottom: 1.5rem;
-    }
-    
-    /* Modern card design with hover effect */
-    .card {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(8px);
-        border-radius: 20px;
-        padding: 24px;
-        box-shadow: 0 4px 30px rgba(2, 6, 23, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        transition: all 0.3s ease;
-    }
-    
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 32px rgba(2, 6, 23, 0.15);
-    }
-    
-    /* Pill/tag design */
-    .pill {
-        background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
-        padding: 4px 12px;
-        border-radius: 999px;
-        font-size: 12px;
-        font-weight: 500;
-        color: #334155;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-    }
-    
-    /* Footer styling */
-    .footer {
-        color: #475569;
-        text-align: center;
-        font-size: 13px;
-        margin-top: 48px;
-        padding: 24px 0;
-        border-top: 1px solid rgba(226, 232, 240, 0.5);
-    }
-    
-    /* Metric display */
-    .metric {
-        font-weight: 700;
-        font-size: 32px;
-        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin: 8px 0;
-    }
-    
-    /* Muted text */
-    .muted {
-        color: #64748b;
-        font-size: 14px;
-    }
-    
-    /* Code chip with animation */
-    .code-chip {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-        color: white;
-        padding: 4px 12px;
-        border-radius: 8px;
-        font-size: 13px;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
-        transition: all 0.2s ease;
-    }
-    
-    .code-chip:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
-    }
-    
-    /* Input field styling */
-    .stTextInput>div>div>input, 
-    .stNumberInput>div>div>input,
-    .stSelectbox>div>div>select {
-        border-radius: 12px !important;
-        padding: 10px 14px !important;
-        border: 1px solid #e2e8f0 !important;
-    }
-    
-    /* Button styling */
-    .stButton>button {
-        border-radius: 12px !important;
-        padding: 10px 24px !important;
-        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%) !important;
-        transition: all 0.2s ease !important;
-    }
-    
-    .stButton>button:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
-    }
-    
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-        width: 8px;
-        height: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        background: rgba(241, 245, 249, 0.5);
-        border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-    }
+/* Base styling */
+.main > div {
+padding-top: 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* Gradient background with subtle animation */
+.stApp {
+    background: radial-gradient(1200px 800px at 10% 20%, rgba(238, 242, 255, 0.8) 0%, transparent 60%),
+    radial-gradient(1400px 900px at 110% 10%, rgba(245, 243, 255, 0.8) 0%, transparent 60%);
+    background-attachment: fixed;
+    animation: gradientShift 20s ease infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 0%, 100% 100%; }
+    100% { background-position: 10% 10%, 90% 90%; }
+}
+
+/* Header styling */
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1.5rem;
+}
+
+/* Modern card design with hover effect */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 30px rgba(2, 6, 23, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(2, 6, 23, 0.15);
+}
+
+/* Pill/tag design */
+.pill {
+    background: linear-gradient(135deg, #e2e8f0 50%, #f1f5f9 100%);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #334155;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Footer styling */
+.footer {
+    color: #475569;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 48px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* Metric display */
+.metric {
+    font-weight: 700;
+    font-size: 32px;
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 8px 0;
+}
+
+/* Muted text */
+.muted {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* Code chip with animation */
+.code-chip {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
+    transition: all 0.2s ease;
+}
+
+.code-chip:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
+}
+
+/* Input field styling */
+.stTextInput>div>div>input, 
+.stNumberInput>div>div>input,
+.stSelectbox>div>div>select {
+    border-radius: 12px !important;
+    padding: 10px 14px !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* Button styling */
+.stButton>button {
+    border-radius: 12px !important;
+    padding: 10px 24px !important;
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%) !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton>button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
 </style>
     """,
     unsafe_allow_html=True,
@@ -412,7 +412,7 @@ def sidebar_nav() -> str:
 <style>
 /* Sidebar container */
 section[data-testid="stSidebar"] {
-    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    background: linear-gradient(180deg, #0b0e1f 0%, #5935b5 100%);
     padding: 1rem;
 }
 
@@ -538,56 +538,81 @@ Quantum Security Lab © 2025<br>
 def section_home():
     st.markdown(
         """
-<style>
+    <style>
 .feature-card {
-background: rgba(255, 255, 255, 0.95);
-border-radius: 16px;
-padding: 24px;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-border: 1px solid rgba(255, 255, 255, 0.2);
-height: 100%;
-transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(20, 30, 48, 0.95) 0%, rgba(36, 59, 85, 0.95) 100%);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
 }
 .feature-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(100, 108, 255, 0.3);
 }
 .feature-card h3 {
-color: #0f172a;
-margin-top: 0;
-margin-bottom: 16px;
-font-size: 1.4rem;
-display: flex;
-align-items: center;
-gap: 10px;
+    color: white;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(90deg, #646cff 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .feature-card ul, .feature-card ol {
-padding-left: 24px;
-margin-bottom: 16px;
+    padding-left: 24px;
+    margin-bottom: 16px;
 }
 .feature-card li {
-margin-bottom: 8px;
-color: #334155;
+    margin-bottom: 8px;
+    color: #e2e8f0;
+    position: relative;
+}
+.feature-card li::before {
+    content: "•";
+    color: #818cf8;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 .feature-card .muted {
-font-size: 0.9rem;
-color: #64748b;
-margin-top: 16px;
-padding-top: 16px;
-border-top: 1px dashed rgba(203, 213, 225, 0.5);
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(148, 163, 184, 0.3);
 }
 .emoji-icon {
-font-size: 1.5rem;
-filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    font-size: 1.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .quick-tip {
-background: rgba(239, 246, 255, 0.6);
-border-left: 4px solid #3b82f6;
-padding: 12px;
-border-radius: 0 8px 8px 0;
-margin-top: 16px;
+    background: rgba(30, 41, 59, 0.7);
+    border-left: 4px solid #818cf8;
+    padding: 12px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 16px;
+    color: #e2e8f0;
+    font-size: 0.95rem;
 }
-</style>
+.quick-tip strong {
+    color: white;
+    background: linear-gradient(90deg, #818cf8 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+    </style>
         """,
         unsafe_allow_html=True
     )
@@ -638,11 +663,11 @@ margin-top: 16px;
 </ol>
 <div class="muted">
 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 6px;">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 8V12" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 16H12.01" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    Tip: For best experience, view on desktop with Chrome or Edge
+<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 8V12" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 16H12.01" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+Tip: For best experience, view on desktop with Chrome or Edge
 </div>
 </div>
             """,
@@ -696,18 +721,18 @@ def plot_bloch_samples(alice_bits: List[int], alice_bases: List[str]):
                 
                 # Add info box
                 info_text = f"""
-                <div style="
-                    background: rgba(248, 250, 252, 0.8);
-                    border-radius: 8px;
-                    padding: 8px;
-                    margin-top: 8px;
-                    font-size: 12px;
-                    color: #334155;
-                ">
-                    <b>State:</b> |{alice_bits[i]}⟩<br>
-                    <b>Basis:</b> {alice_bases[i]} ({'Hadamard' if alice_bases[i] == '×' else 'Standard'})<br>
-                    <b>Vector:</b> {np.round(statevector, 3)}
-                </div>
+<div style="
+background: rgba(248, 250, 252, 0.8);
+border-radius: 8px;
+padding: 8px;
+margin-top: 8px;
+font-size: 12px;
+color: #334155;
+">
+<b>State:</b> |{alice_bits[i]}⟩<br>
+<b>Basis:</b> {alice_bases[i]} ({'Hadamard' if alice_bases[i] == '×' else 'Standard'})<br>
+<b>Vector:</b> {np.round(statevector, 3)}
+</div>
                 """
                 st.markdown(info_text, unsafe_allow_html=True)
                 
@@ -807,119 +832,185 @@ def section_simulator():
 def section_theory():
     # Inject CSS
     st.markdown("""
-        <style>
-            .theory-card {
-                background: rgba(255, 255, 255, 0.96);
-                border-radius: 16px;
-                padding: 28px;
-                box-shadow: 0 8px 32px rgba(2, 6, 23, 0.1);
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                margin-bottom: 2rem;
-            }
-            .protocol-step {
-                padding: 16px;
-                margin: 12px 0;
-                border-left: 4px solid #6366f1;
-                background: rgba(238, 242, 255, 0.3);
-                border-radius: 0 8px 8px 0;
-                transition: all 0.3s ease;
-            }
-            .protocol-step:hover {
-                background: rgba(238, 242, 255, 0.6);
-                transform: translateX(4px);
-            }
-            .protocol-step b {
-                color: #4338ca;
-            }
-            .basis-matrix {
-                background: rgba(241, 245, 249, 0.6);
-                border-radius: 8px;
-                padding: 12px;
-                font-family: monospace;
-                margin: 8px 0;
-            }
-            .quantum-formula {
-                font-family: 'Cambria Math', serif;
-                color: #4338ca;
-                font-size: 1.1rem;
-            }
-            .highlight-box {
-                margin-top: 24px;
-                padding: 16px;
-                background: rgba(240, 253, 250, 0.5);
-                border-radius: 8px;
-                border-left: 4px solid #10b981;
-            }
-        </style>
+    <style>
+        .theory-card {
+            background: linear-gradient(135deg, 
+                          rgba(38, 61, 235, 0.98) 0%, 
+                          rgba(20, 25, 60, 0.98) 100%);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
+                        0 0 0 1px rgba(113, 119, 255, 0.15),
+                        inset 0 0 20px rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(113, 119, 255, 0.2);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .theory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                          transparent 0%, 
+                          rgba(99, 102, 241, 0.6) 50%, 
+                          transparent 100%);
+        }
+        
+        .protocol-step {
+            padding: 18px;
+            margin: 14px 0;
+            border-left: 4px solid #6366f1;
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 0 8px 8px 0;
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(4px);
+        }
+        
+        .protocol-step:hover {
+            background: rgba(30, 41, 59, 0.9);
+            transform: translateX(6px);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+        }
+        
+        .protocol-step h4 {
+            color: #e0e7ff;
+            margin: 0 0 10px 0;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .protocol-step b {
+            background: linear-gradient(90deg, #818cf8 0%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .basis-matrix {
+            background: rgba(20, 30, 48, 0.8);
+            border-radius: 8px;
+            padding: 14px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: #e2e8f0;
+        }
+        
+        .quantum-formula {
+            font-family: 'Cambria Math', serif;
+            background: linear-gradient(90deg, #818cf8 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.15rem;
+        }
+        
+        .highlight-box {
+            margin-top: 28px;
+            padding: 18px;
+            background: linear-gradient(135deg, 
+                          rgba(16, 185, 129, 0.15) 0%, 
+                          rgba(6, 78, 59, 0.15) 100%);
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                          rgba(16, 185, 129, 0.05) 0%, 
+                          transparent 50%);
+            pointer-events: none;
+        }
+        
+        .highlight-box h4 {
+            color: #a7f3d0;
+            margin: 0 0 12px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .quantum-icon {
+            width: 24px;
+            height: 24px;
+            filter: drop-shadow(0 0 4px rgba(167, 243, 208, 0.3));
+        }
+    </style>
     """, unsafe_allow_html=True)
 
     # Use HTML instead of SVG icons (Streamlit strips inline SVG often)
     st.markdown("""
-        <div class="theory-card">
-            <h2 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
-                📡 The BB84 Quantum Key Distribution Protocol
-            </h2>
-
-            <p style="color: #475569; line-height: 1.6; font-size: 1.05rem;">
-                Proposed by <b>Bennett</b> and <b>Brassard</b> in 1984, BB84 was the first quantum cryptography 
-                protocol and remains the foundation of <b>Quantum Key Distribution (QKD)</b>.
-            </p>
-
-            <div class="protocol-step">
-                <h4>1. Preparation</h4>
-                Alice encodes classical bits into quantum states:
-                <div class="basis-matrix">
-                    <b>Rectilinear (+):</b><br>
-                    0 → |0⟩ = <span class="quantum-formula">[1; 0]</span><br>
-                    1 → |1⟩ = <span class="quantum-formula">[0; 1]</span><br><br>
-                    <b>Diagonal (×):</b><br>
-                    0 → |+⟩ = <span class="quantum-formula">1/√2[1; 1]</span><br>
-                    1 → |−⟩ = <span class="quantum-formula">1/√2[1; -1]</span>
-                </div>
-            </div>
-
-            <div class="protocol-step">
-                <h4>2. Quantum Transmission</h4>
-                Alice sends qubits over a quantum channel. Any eavesdropping disturbs the states 
-                (<i>No-Cloning Theorem</i>).
-            </div>
-
-            <div class="protocol-step">
-                <h4>3. Measurement</h4>
-                Bob measures in a random basis.<br>
-                <div style="margin: 8px 0; padding: 8px; background: rgba(239, 246, 255, 0.5); border-radius: 8px;">
-                    <b>Matching basis:</b> 100% correct<br>
-                    <b>Mismatched basis:</b> 50% random
-                </div>
-            </div>
-
-            <div class="protocol-step">
-                <h4>4. Sifting</h4>
-                They compare bases publicly and discard mismatched results.
-            </div>
-
-            <div class="protocol-step">
-                <h4>5. Error Estimation</h4>
-                A subset of bits is revealed to estimate QBER.
-                <br><b>QBER < 25%:</b> Secure<br>
-                <b>QBER ≥ 25%:</b> Eavesdropping likely
-            </div>
-
-            <div class="protocol-step">
-                <h4>6. Key Distillation</h4>
-                If secure, they apply:<br>
-                • Error correction<br>
-                • Privacy amplification
-            </div>
-
-            <div class="highlight-box">
-                <h4>🔑 Quantum Advantage</h4>
-                Security is guaranteed by physics, not math:<br>
-                • No-Cloning Theorem<br>
-                • Measurement Disturbance<br>
-                • Uncertainty Principle
-            </div>
-        </div>
+<div class="theory-card">
+<h2 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
+    📡 The BB84 Quantum Key Distribution Protocol
+</h2>
+<p style="color: #475569; line-height: 1.6; font-size: 1.05rem;">
+    Proposed by <b>Bennett</b> and <b>Brassard</b> in 1984, BB84 was the first quantum cryptography 
+    protocol and remains the foundation of <b>Quantum Key Distribution (QKD)</b>.
+</p>
+<div class="protocol-step">
+    <h4>1. Preparation</h4>
+    Alice encodes classical bits into quantum states:
+    <div class="basis-matrix">
+        <b>Rectilinear (+):</b><br>
+        0 → |0⟩ = <span class="quantum-formula">[1; 0]</span><br>
+        1 → |1⟩ = <span class="quantum-formula">[0; 1]</span><br><br>
+        <b>Diagonal (×):</b><br>
+        0 → |+⟩ = <span class="quantum-formula">1/√2[1; 1]</span><br>
+        1 → |−⟩ = <span class="quantum-formula">1/√2[1; -1]</span>
+    </div>
+</div>
+<div class="protocol-step">
+    <h4>2. Quantum Transmission</h4>
+    Alice sends qubits over a quantum channel. Any eavesdropping disturbs the states 
+    (<i>No-Cloning Theorem</i>).
+</div>
+<div class="protocol-step">
+<h4>3. Measurement</h4>
+    Bob measures in a random basis.<br>
+    <div style="margin: 8px 0; padding: 8px; background: rgba(239, 246, 255, 0.5); border-radius: 8px;">
+        <b>Matching basis:</b> 100% correct<br>
+        <b>Mismatched basis:</b> 50% random
+    </div>
+</div>
+<div class="protocol-step">
+    <h4>4. Sifting</h4>
+    They compare bases publicly and discard mismatched results.
+</div>
+<div class="protocol-step">
+    <h4>5. Error Estimation</h4>
+    A subset of bits is revealed to estimate QBER.
+    <br><b>QBER < 25%:</b> Secure<br>
+    <b>QBER ≥ 25%:</b> Eavesdropping likely
+</div>
+<div class="protocol-step">
+    <h4>6. Key Distillation</h4>
+    If secure, they apply:<br>
+    • Error correction<br>
+    • Privacy amplification
+</div>
+<div class="highlight-box">
+<h4>🔑 Quantum Advantage</h4>
+Security is guaranteed by physics, not math:<br>
+• No-Cloning Theorem<br>
+• Measurement Disturbance<br>
+• Uncertainty Principle
+</div>
+</div>
     """, unsafe_allow_html=True)
 
 
@@ -1102,23 +1193,165 @@ implementation teams to ensure both technical accuracy and educational value.
 def section_faq():
     st.markdown(
         """
-<div class="card">
-<h3>FAQ</h3>
+        <style>
+            .faq-card {
+                background: linear-gradient(135deg, rgba(10, 12, 28, 0.98) 0%, rgba(20, 25, 60, 0.98) 100%);
+                border-radius: 16px;
+                padding: 28px;
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
+                            0 0 0 1px rgba(113, 119, 255, 0.15),
+                            inset 0 0 20px rgba(99, 102, 241, 0.1);
+                border: 1px solid rgba(113, 119, 255, 0.2);
+                margin-bottom: 2rem;
+            }
+            
+            .faq-card h3 {
+                color: white;
+                margin-top: 0;
+                margin-bottom: 24px;
+                font-size: 1.6rem;
+                background: linear-gradient(90deg, #646cff 0%, #a855f7 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(113, 119, 255, 0.3);
+            }
+            
+            details {
+                margin-bottom: 16px;
+                border-radius: 8px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                background: rgba(30, 41, 59, 0.7);
+                border: 1px solid rgba(99, 102, 241, 0.2);
+            }
+            
+            details[open] {
+                background: rgba(30, 41, 59, 0.9);
+                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+            }
+            
+            summary {
+                padding: 18px;
+                font-weight: 600;
+                color: #e0e7ff;
+                cursor: pointer;
+                position: relative;
+                list-style: none;
+                transition: all 0.2s ease;
+                font-size: 1.1rem;
+            }
+            
+            summary:hover {
+                color: white;
+                background: rgba(99, 102, 241, 0.1);
+            }
+            
+            summary::after {
+                content: "+";
+                position: absolute;
+                right: 18px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 1.2rem;
+                color: #818cf8;
+                transition: all 0.3s ease;
+            }
+            
+            details[open] summary::after {
+                content: "-";
+                color: #a855f7;
+            }
+            
+            details div {
+                padding: 0 18px 18px 18px;
+                color: #cbd5e1;
+                line-height: 1.6;
+                font-size: 1rem;
+                border-top: 1px solid rgba(99, 102, 241, 0.2);
+                margin-top: 8px;
+                padding-top: 12px;
+            }
+            
+            .quantum-badge {
+                display: inline-block;
+                background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+                color: white;
+                padding: 4px 10px;
+                border-radius: 999px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                margin-right: 8px;
+            }
+        </style>
+        
+<div class="faq-card">
+<h3>❓ Frequently Asked Questions</h3>
+
 <details>
-  <summary><b>Why do Bloch spheres sometimes look identical?</b></summary>
-  <div>States like |0⟩ and |+⟩ may appear similar if the visualization library projects them similarly—ensure Qiskit is installed and view multiple qubits.</div>
+<summary><span class="quantum-badge">Visualization</span> Why do Bloch spheres sometimes look identical?</summary>
+<div>
+States like |0⟩ and |+⟩ may appear similar if the visualization library projects them similarly. 
+This occurs because the Bloch sphere is a 2D representation of 3D quantum states. 
+<br><br>
+<b>Solution:</b> 
+<ul>
+<li>Ensure Qiskit visualization components are properly installed</li>
+<li>View multiple qubits to compare different states</li>
+<li>Rotate the visualization if interactive 3D is available</li>
+</ul>
+</div>
 </details>
+
 <details>
-  <summary><b>What threshold indicates eavesdropping?</b></summary>
-  <div>In ideal BB84, an intercept-resend eavesdropper yields ~25% error on the sifted bits. Realistic channels tolerate only a few percent.</div>
+    <summary><span class="quantum-badge">Security</span> What threshold indicates eavesdropping?</summary>
+    <div>
+        In ideal BB84 protocol conditions:
+        <ul>
+            <li>An intercept-resend eavesdropper yields ~25% error rate</li>
+            <li>Real-world quantum channels typically tolerate only 2-5% error</li>
+            <li>Error rates above 10% usually indicate significant interference</li>
+        </ul>
+        <br>
+        Our simulator shows real-time error rate analysis to help identify potential eavesdropping.
+    </div>
 </details>
+
 <details>
-  <summary><b>Can I reproduce results?</b></summary>
-  <div>Use a fixed random seed in the Simulator to get repeatable runs.</div>
+    <summary><span class="quantum-badge">Reproducibility</span> Can I reproduce results?</summary>
+    <div>
+        Yes! For consistent, reproducible runs:
+        <ol>
+            <li>Set a fixed random seed in the Simulator parameters</li>
+            <li>Use the same number of qubits for each run</li>
+            <li>Maintain identical eavesdropper settings</li>
+        </ol>
+        <br>
+        This ensures you get identical results for demonstration and debugging purposes.
+    </div>
+</details>
+
+<details>
+<summary><span class="quantum-badge">Technical</span> What are the system requirements?</summary>
+<div>
+<b>Minimum Requirements:</b>
+<ul>
+<li>Modern web browser (Chrome, Firefox, Edge)</li>
+<li>Python 3.8+ for local deployment</li>
+<li>4GB RAM for quantum simulations</li>
+</ul>
+<br>
+<b>Recommended:</b>
+<ul>
+<li>8GB+ RAM for larger simulations</li>
+<li>Qiskit installed for full visualization features</li>
+<li>WebGL support for interactive 3D views</li>
+</ul>
+</div>
 </details>
 </div>
         """,
-        unsafe_allow_html=True,
+        unsafe_allow_html=True
     )
 
 
