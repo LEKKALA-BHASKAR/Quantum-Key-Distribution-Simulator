@@ -1382,15 +1382,8 @@ def footer():
 
 def main():
     header()
-    st.set_page_config(
-        page_title="BB84 Quantum Key Distribution",
-        page_icon="🔐",
-        layout="wide",
-        initial_sidebar_state="expanded",
-    )
-
+    st.title("Quantum Key Distribution (BB84) Simulator")
     current_page = sidebar_nav()
-
     # Page routing
     if current_page == "Home":
         section_home()
