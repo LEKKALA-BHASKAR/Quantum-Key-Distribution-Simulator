@@ -42,153 +42,153 @@ st.set_page_config(
 # Minimal custom CSS to elevate the look
 st.markdown(
     """
-    <style>
-        /* Base styling */
-        .main > div {
-            padding-top: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Gradient background with subtle animation */
-        .stApp {
-            background: radial-gradient(1200px 800px at 10% -20%, rgba(238, 242, 255, 0.8) 0%, transparent 60%),
-                        radial-gradient(1400px 900px at 110% 10%, rgba(245, 243, 255, 0.8) 0%, transparent 60%);
-            background-attachment: fixed;
-            animation: gradientShift 20s ease infinite alternate;
-        }
-        
-        @keyframes gradientShift {
-            0% { background-position: 0% 0%, 100% 100%; }
-            100% { background-position: 10% 10%, 90% 90%; }
-        }
-        
-        /* Header styling */
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Modern card design with hover effect */
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(8px);
-            border-radius: 20px;
-            padding: 24px;
-            box-shadow: 0 4px 30px rgba(2, 6, 23, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(2, 6, 23, 0.15);
-        }
-        
-        /* Pill/tag design */
-        .pill {
-            background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 12px;
-            font-weight: 500;
-            color: #334155;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-        
-        /* Footer styling */
-        .footer {
-            color: #475569;
-            text-align: center;
-            font-size: 13px;
-            margin-top: 48px;
-            padding: 24px 0;
-            border-top: 1px solid rgba(226, 232, 240, 0.5);
-        }
-        
-        /* Metric display */
-        .metric {
-            font-weight: 700;
-            font-size: 32px;
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 8px 0;
-        }
-        
-        /* Muted text */
-        .muted {
-            color: #64748b;
-            font-size: 14px;
-        }
-        
-        /* Code chip with animation */
-        .code-chip {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
-            transition: all 0.2s ease;
-        }
-        
-        .code-chip:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
-        }
-        
-        /* Input field styling */
-        .stTextInput>div>div>input, 
-        .stNumberInput>div>div>input,
-        .stSelectbox>div>div>select {
-            border-radius: 12px !important;
-            padding: 10px 14px !important;
-            border: 1px solid #e2e8f0 !important;
-        }
-        
-        /* Button styling */
-        .stButton>button {
-            border-radius: 12px !important;
-            padding: 10px 24px !important;
-            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%) !important;
-            transition: all 0.2s ease !important;
-        }
-        
-        .stButton>button:hover {
-            transform: translateY(-2px) !important;
-            box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
-        }
-        
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(241, 245, 249, 0.5);
-            border-radius: 10px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-    </style>
+<style>
+    /* Base styling */
+    .main > div {
+        padding-top: 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Gradient background with subtle animation */
+    .stApp {
+        background: radial-gradient(1200px 800px at 10% -20%, rgba(238, 242, 255, 0.8) 0%, transparent 60%),
+                    radial-gradient(1400px 900px at 110% 10%, rgba(245, 243, 255, 0.8) 0%, transparent 60%);
+        background-attachment: fixed;
+        animation: gradientShift 20s ease infinite alternate;
+    }
+    
+    @keyframes gradientShift {
+        0% { background-position: 0% 0%, 100% 100%; }
+        100% { background-position: 10% 10%, 90% 90%; }
+    }
+    
+    /* Header styling */
+    .app-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Modern card design with hover effect */
+    .card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 24px;
+        box-shadow: 0 4px 30px rgba(2, 6, 23, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 32px rgba(2, 6, 23, 0.15);
+    }
+    
+    /* Pill/tag design */
+    .pill {
+        background: linear-gradient(135deg, #e2e8f0 0%, #f1f5f9 100%);
+        padding: 4px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #334155;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+    }
+    
+    /* Footer styling */
+    .footer {
+        color: #475569;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 48px;
+        padding: 24px 0;
+        border-top: 1px solid rgba(226, 232, 240, 0.5);
+    }
+    
+    /* Metric display */
+    .metric {
+        font-weight: 700;
+        font-size: 32px;
+        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin: 8px 0;
+    }
+    
+    /* Muted text */
+    .muted {
+        color: #64748b;
+        font-size: 14px;
+    }
+    
+    /* Code chip with animation */
+    .code-chip {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 8px;
+        font-size: 13px;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
+        transition: all 0.2s ease;
+    }
+    
+    .code-chip:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
+    }
+    
+    /* Input field styling */
+    .stTextInput>div>div>input, 
+    .stNumberInput>div>div>input,
+    .stSelectbox>div>div>select {
+        border-radius: 12px !important;
+        padding: 10px 14px !important;
+        border: 1px solid #e2e8f0 !important;
+    }
+    
+    /* Button styling */
+    .stButton>button {
+        border-radius: 12px !important;
+        padding: 10px 24px !important;
+        background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%) !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .stButton>button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3) !important;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: rgba(241, 245, 249, 0.5);
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+</style>
     """,
     unsafe_allow_html=True,
 )
@@ -330,74 +330,74 @@ def run_bb84(num_bits: int, eve_present: bool, seed: Optional[int] = None) -> Ru
 def header():
     st.markdown(
         """
-        <style>
-            @keyframes float {
-                0% { transform: translateY(0px); }
-                50% { transform: translateY(-5px); }
-                100% { transform: translateY(0px); }
-            }
-            .quantum-icon {
-                animation: float 3s ease-in-out infinite;
-                filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.2));
-            }
-            .protocol-tag {
-                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-                color: white;
-                padding: 4px 16px;
-                border-radius: 999px;
-                font-size: 14px;
-                font-weight: 600;
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
-                transition: all 0.3s ease;
-            }
-            .protocol-tag:hover {
-                transform: scale(1.05);
-                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
-            }
-            .header-title {
-                font-size: 2.2rem;
-                font-weight: 700;
-                margin: 0;
-                background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                display: inline;
-            }
-            .header-subtitle {
-                color: #64748b;
-                font-size: 1.1rem;
-                margin-top: 8px;
-                line-height: 1.5;
-                max-width: 800px;
-            }
-            .header-container {
-                padding-bottom: 1.5rem;
-                border-bottom: 1px solid rgba(226, 232, 240, 0.5);
-                margin-bottom: 2rem;
-            }
-        </style>
-        
-        <div class="header-container">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
-                <span class="protocol-tag">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="white"/>
-                        <path d="M12 6C8.69 6 6 8.69 6 12C6 15.31 8.69 18 12 18C15.31 18 18 15.31 18 12C18 8.69 15.31 6 12 6ZM12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12C16 14.21 14.21 16 12 16Z" fill="white"/>
-                    </svg>
-                    BB84 PROTOCOL
-                </span>
-                <h1 class="header-title">Quantum Key Distribution Simulator</h1>
-                <span class="quantum-icon">🔮</span>
-            </div>
-            <p class="header-subtitle">
-                Interactively explore the BB84 protocol with quantum state visualization, eavesdropping detection, 
-                and secure key generation. See quantum cryptography in action through animated Bloch spheres 
-                and real-time protocol simulation.
-            </p>
-        </div>
+<style>
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+.quantum-icon {
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.2));
+}
+.protocol-tag {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+}
+.protocol-tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+.header-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+}
+.header-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-top: 8px;
+    line-height: 1.5;
+    max-width: 800px;
+}
+.header-container {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    margin-bottom: 2rem;
+}
+</style>
+
+<div class="header-container">
+<div style="display: flex; align-items: center; gap: 16px; margin-bottom: 8px;">
+<span class="protocol-tag">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="white"/>
+<path d="M12 6C8.69 6 6 8.69 6 12C6 15.31 8.69 18 12 18C15.31 18 18 15.31 18 12C18 8.69 15.31 6 12 6ZM12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12C16 14.21 14.21 16 12 16Z" fill="white"/>
+</svg>
+BB84 PROTOCOL
+</span>
+<h1 class="header-title">Quantum Key Distribution Simulator</h1>
+<span class="quantum-icon">🔮</span>
+</div>
+<p class="header-subtitle">
+Interactively explore the BB84 protocol with quantum state visualization, eavesdropping detection, 
+and secure key generation. See quantum cryptography in action through animated Bloch spheres 
+and real-time protocol simulation.
+</p>
+</div>
         """,
         unsafe_allow_html=True
     )
@@ -409,75 +409,71 @@ def sidebar_nav() -> str:
     # --- Custom CSS for sidebar ---
     st.markdown(
         """
-        <style>
-            /* Sidebar container */
-            section[data-testid="stSidebar"] {
-                background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
-            }
-            
-            /* Logo styling */
-            .sidebar-logo {
-                filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.2));
-                transition: all 0.3s ease;
-                margin-bottom: 1.5rem;
-                border-radius: 12px;
-                overflow: hidden;
-                border: 1px solid rgba(226, 232, 240, 0.5);
-            }
+<style>
+/* Sidebar container */
+section[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    padding: 1rem;
+}
 
-            /* Navigation title */
-            .sidebar-title {
-                font-size: 1.1rem;
-                font-weight: 600;
-                color: #4f46e5;
-                margin: 1rem 0;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                justify-content: center;
-                padding-bottom: 8px;
-                border-bottom: 1px solid #e2e8f0;
-            }
-
-            /* Custom radio button styling */
-            .stRadio [role=radiogroup] {
-                gap: 6px !important;
-                align-items: center;
-            }
-            .stRadio [role=radiogroup] label {
-                padding: 12px 18px !important;
-                border-radius: 12px !important;
-                margin: 0 !important;
-                transition: all 0.3s ease !important;
-                display: flex !important;
-                align-items: center !important;
-                gap: 12px !important;
-                font-weight: 500 !important;
-                color: #334155 !important;
-                border: 1px solid transparent !important;
-                width: 100% !important;
-            }
-            .stRadio [role=radiogroup] label:hover {
-                background: rgba(238, 242, 255, 0.9) !important;
-                transform: translateX(4px) !important;
-            }
-            .stRadio [role=radiogroup] label[data-baseweb="radio"]:has(> div:first-child[aria-checked="true"]) {
-                background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
-                color: white !important;
-                box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25) !important;
-                border: 1px solid rgba(255, 255, 255, 0.2) !important;
-            }
-
-            /* Footer */
-            .sidebar-footer {
-                margin-top: 2rem;
-                font-size: 0.8rem;
-                color: #64748b;
-                text-align: center;
-                padding-top: 1rem;
-                border-top: 1px solid #e2e8f0;
-            }
-        </style>
+/* Logo styling */
+.sidebar-logo {
+    filter: drop-shadow(0 4px 6px rgba(79, 70, 229, 0.2));
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(226, 232, 240, 0.5);
+}
+/* Navigation title */
+.sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3b32d1;
+    margin: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+/* Radio container */
+div[role="radiogroup"] {
+    display: flex;
+    flex-direction: column;
+    gap: 8px !important;
+}
+/* Radio button label */
+div[role="radiogroup"] > label {
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+    cursor: pointer;
+    font-weight: 500 !important;
+    color: #10448f !important;
+    border: 1px solid transparent !important;
+    transition: all 0.3s ease !important;
+    margin: 0 !important;
+}
+/* Hover effect */
+div[role="radiogroup"] > label:hover {
+    background: rgba(238, 242, 255, 0.9) !important;
+    transform: translateX(4px) !important;
+}
+/* Selected option */
+div[role="radiogroup"] > label[data-baseweb="radio"]:has(> div:first-child[aria-checked="true"]) {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(99, 102, 241, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+/* Footer */
+.sidebar-footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #062654;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+</style>
         """,
         unsafe_allow_html=True
     )
@@ -487,18 +483,18 @@ def sidebar_nav() -> str:
         # Logo
         st.markdown(
             """
-            <div style="text-align: center">
-                <img class="sidebar-logo" 
-                     src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Bloch_sphere.svg" 
-                     width="100%">
-            </div>
-            <div class="sidebar-title">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 22V12H15V22" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                NAVIGATION
-            </div>
+<div style="text-align: center">
+<img class="sidebar-logo" 
+src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Bloch_sphere.svg" 
+width="100%">
+</div>
+<div class="sidebar-title">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 22V12H15V22" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+NAVIGATION
+</div>
             """,
             unsafe_allow_html=True
         )
@@ -530,69 +526,68 @@ def sidebar_nav() -> str:
 
         # Footer
         st.markdown(
-            """<div class="sidebar-footer">
-            Quantum Security Lab © 2025<br>
-            <span style="font-size:0.7rem">v1.0.0</span>
-            </div>""",
+"""<div class="sidebar-footer">
+Quantum Security Lab © 2025<br>
+<span style="font-size:0.7rem">v1.0.0</span>
+</div>""",
             unsafe_allow_html=True
         )
 
     return st.session_state.current_page
 
-
 def section_home():
     st.markdown(
         """
-        <style>
-            .feature-card {
-                background: rgba(255, 255, 255, 0.95);
-                border-radius: 16px;
-                padding: 24px;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                height: 100%;
-                transition: all 0.3s ease;
-            }
-            .feature-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-            }
-            .feature-card h3 {
-                color: #0f172a;
-                margin-top: 0;
-                margin-bottom: 16px;
-                font-size: 1.4rem;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-            .feature-card ul, .feature-card ol {
-                padding-left: 24px;
-                margin-bottom: 16px;
-            }
-            .feature-card li {
-                margin-bottom: 8px;
-                color: #334155;
-            }
-            .feature-card .muted {
-                font-size: 0.9rem;
-                color: #64748b;
-                margin-top: 16px;
-                padding-top: 16px;
-                border-top: 1px dashed rgba(203, 213, 225, 0.5);
-            }
-            .emoji-icon {
-                font-size: 1.5rem;
-                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-            }
-            .quick-tip {
-                background: rgba(239, 246, 255, 0.6);
-                border-left: 4px solid #3b82f6;
-                padding: 12px;
-                border-radius: 0 8px 8px 0;
-                margin-top: 16px;
-            }
-        </style>
+<style>
+.feature-card {
+background: rgba(255, 255, 255, 0.95);
+border-radius: 16px;
+padding: 24px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+border: 1px solid rgba(255, 255, 255, 0.2);
+height: 100%;
+transition: all 0.3s ease;
+}
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+.feature-card h3 {
+color: #0f172a;
+margin-top: 0;
+margin-bottom: 16px;
+font-size: 1.4rem;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.feature-card ul, .feature-card ol {
+padding-left: 24px;
+margin-bottom: 16px;
+}
+.feature-card li {
+margin-bottom: 8px;
+color: #334155;
+}
+.feature-card .muted {
+font-size: 0.9rem;
+color: #64748b;
+margin-top: 16px;
+padding-top: 16px;
+border-top: 1px dashed rgba(203, 213, 225, 0.5);
+}
+.emoji-icon {
+font-size: 1.5rem;
+filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+.quick-tip {
+background: rgba(239, 246, 255, 0.6);
+border-left: 4px solid #3b82f6;
+padding: 12px;
+border-radius: 0 8px 8px 0;
+margin-top: 16px;
+}
+</style>
         """,
         unsafe_allow_html=True
     )
@@ -602,19 +597,19 @@ def section_home():
     with col1:
         st.markdown(
             """
-            <div class="feature-card">
-                <h3><span class="emoji-icon">👋</span> Welcome to Quantum Secure</h3>
-                <p style="color: #475569; margin-bottom: 20px;">This interactive simulator demonstrates the BB84 quantum key distribution protocol—the gold standard for quantum-safe cryptography. Explore how quantum principles enable theoretically unbreakable encryption.</p>
-                <ul>
-                    <li><b>Generate quantum states</b> using superposition and basis choices</li>
-                    <li><b>Detect eavesdroppers</b> through quantum measurement disturbance</li>
-                    <li><b>Visualize qubits</b> on animated Bloch spheres</li>
-                    <li><b>Extract secure keys</b> through sifting and error estimation</li>
-                </ul>
-                <div class="quick-tip">
-                    <b>Pro Tip:</b> Compare error rates with and without Eve to see quantum security in action!
-                </div>
-            </div>
+<div class="feature-card">
+<h3><span class="emoji-icon">👋</span> Welcome to Quantum Secure</h3>
+<p style="color: #475569; margin-bottom: 20px;">This interactive simulator demonstrates the BB84 quantum key distribution protocol—the gold standard for quantum-safe cryptography. Explore how quantum principles enable theoretically unbreakable encryption.</p>
+<ul>
+<li><b>Generate quantum states</b> using superposition and basis choices</li>
+<li><b>Detect eavesdroppers</b> through quantum measurement disturbance</li>
+<li><b>Visualize qubits</b> on animated Bloch spheres</li>
+<li><b>Extract secure keys</b> through sifting and error estimation</li>
+</ul>
+<div class="quick-tip">
+<b>Pro Tip:</b> Compare error rates with and without Eve to see quantum security in action!
+</div>
+</div>
             """,
             unsafe_allow_html=True,
         )
@@ -622,34 +617,34 @@ def section_home():
     with col2:
         st.markdown(
             """
-            <div class="feature-card">
-                <h3><span class="emoji-icon">⚡</span> Quick Start Guide</h3>
-                <ol>
-                    <li><b>Navigate to Simulator</b> using the sidebar menu</li>
-                    <li><b>Configure parameters</b>:
-                        <ul style="padding-left: 20px; margin-top: 8px;">
-                            <li>Set key length (20-100 qubits)</li>
-                            <li>Toggle Eve to simulate attacks</li>
-                            <li>Enable Bloch sphere visualization</li>
-                        </ul>
-                    </li>
-                    <li><b>Run protocol</b> and analyze results:
-                        <ul style="padding-left: 20px; margin-top: 8px;">
-                            <li>View sifted key statistics</li>
-                            <li>Check eavesdropper detection</li>
-                            <li>Download final secure key</li>
-                        </ul>
-                    </li>
-                </ol>
-                <div class="muted">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 6px;">
-                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 8V12" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M12 16H12.01" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Tip: For best experience, view on desktop with Chrome or Edge
-                </div>
-            </div>
+<div class="feature-card">
+<h3><span class="emoji-icon">⚡</span> Quick Start Guide</h3>
+<ol>
+<li><b>Navigate to Simulator</b> using the sidebar menu</li>
+<li><b>Configure parameters</b>:
+<ul style="padding-left: 20px; margin-top: 8px;">
+<li>Set key length (20-100 qubits)</li>
+<li>Toggle Eve to simulate attacks</li>
+<li>Enable Bloch sphere visualization</li>
+</ul>
+</li>
+<li><b>Run protocol</b> and analyze results:
+<ul style="padding-left: 20px; margin-top: 8px;">
+<li>View sifted key statistics</li>
+<li>Check eavesdropper detection</li>
+<li>Download final secure key</li>
+</ul>
+</li>
+</ol>
+<div class="muted">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle; margin-right: 6px;">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 8V12" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 16H12.01" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    Tip: For best experience, view on desktop with Chrome or Edge
+</div>
+</div>
             """,
             unsafe_allow_html=True,
         )
@@ -1014,116 +1009,114 @@ def section_team():
 
     st.markdown(
         """
-        <div class="team-card">
-            <h2 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
-                <span style="display: flex; align-items: center; gap: 10px;">
-                    <svg class="team-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    Quantum Development Team
-                </span>
-            </h2>
-            
-            <p style="color: #475569; line-height: 1.6;">
-                Our interdisciplinary team combines quantum physics expertise with software engineering and design 
-                to create accessible quantum education tools.
-            </p>
-            
-            <div class="team-grid">
-                <div class="member-card">
-                    <div class="member-role">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Lead Quantum Developer
-                    </div>
-                    <div class="member-bio">
-                        Designs and implements the quantum simulation engine, protocol logic, and visualization systems.
-                    </div>
-                    <div>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Qiskit</span>
-                        <span class="skill-tag">Quantum Circuits</span>
-                        <span class="skill-tag">Streamlit</span>
-                    </div>
-                </div>
-                
-                <div class="member-card">
-                    <div class="member-role">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        Quantum Researcher
-                    </div>
-                    <div class="member-bio">
-                        Ensures protocol accuracy and develops educational content about quantum information theory.
-                    </div>
-                    <div>
-                        <span class="skill-tag">QKD Theory</span>
-                        <span class="skill-tag">Quantum Info</span>
-                        <span class="skill-tag">Pedagogy</span>
-                        <span class="skill-tag">Security Analysis</span>
-                    </div>
-                </div>
-                
-                <div class="member-card">
-                    <div class="member-role">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        UX & Documentation
-                    </div>
-                    <div class="member-bio">
-                        Crafts intuitive interfaces and learning materials to make quantum concepts accessible.
-                    </div>
-                    <div>
-                        <span class="skill-tag">UI/UX</span>
-                        <span class="skill-tag">Technical Writing</span>
-                        <span class="skill-tag">Visual Design</span>
-                        <span class="skill-tag">Accessibility</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="margin-top: 24px; padding: 16px; background: rgba(240, 253, 250, 0.5); border-radius: 8px; border-left: 4px solid #10b981;">
-                <h4 style="margin: 0 0 8px 0; color: #047857;">Collaboration</h4>
-                <p style="margin: 0; color: #064e3b;">
-                    We follow agile development principles with weekly syncs between quantum theory and 
-                    implementation teams to ensure both technical accuracy and educational value.
-                </p>
-            </div>
-        </div>
-        """,
+<div class="team-card">
+<h2 style="margin-top: 0; color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px;">
+<span style="display: flex; align-items: center; gap: 10px;">
+<svg class="team-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 3.13C16.8604 3.3503 17.623 3.8507 18.1676 4.55231C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+Quantum Development Team
+</span>
+</h2>
+<p style="color: #475569; line-height: 1.6;">
+Our interdisciplinary team combines quantum physics expertise with software engineering and design 
+to create accessible quantum education tools.
+</p>
+<div class="team-grid">
+<div class="member-card">
+<div class="member-role">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+Lead Quantum Developer
+</div>
+<div class="member-bio">
+Designs and implements the quantum simulation engine, protocol logic, and visualization systems.
+</div>
+<div>
+<span class="skill-tag">Python</span>
+<span class="skill-tag">Qiskit</span>
+<span class="skill-tag">Quantum Circuits</span>
+<span class="skill-tag">Streamlit</span>
+</div>
+</div>
+
+<div class="member-card">
+<div class="member-role">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+Quantum Researcher
+</div>
+<div class="member-bio">
+Ensures protocol accuracy and develops educational content about quantum information theory.
+</div>
+<div>
+<span class="skill-tag">QKD Theory</span>
+<span class="skill-tag">Quantum Info</span>
+<span class="skill-tag">Pedagogy</span>
+<span class="skill-tag">Security Analysis</span>
+</div>
+</div>
+
+<div class="member-card">
+<div class="member-role">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 13H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 17H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 9H9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+UX & Documentation
+</div>
+<div class="member-bio">
+Crafts intuitive interfaces and learning materials to make quantum concepts accessible.
+</div>
+<div>
+<span class="skill-tag">UI/UX</span>
+<span class="skill-tag">Technical Writing</span>
+<span class="skill-tag">Visual Design</span>
+<span class="skill-tag">Accessibility</span>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 24px; padding: 16px; background: rgba(240, 253, 250, 0.5); border-radius: 8px; border-left: 4px solid #10b981;">
+<h4 style="margin: 0 0 8px 0; color: #047857;">Collaboration</h4>
+<p style="margin: 0; color: #064e3b;">
+We follow agile development principles with weekly syncs between quantum theory and 
+implementation teams to ensure both technical accuracy and educational value.
+</p>
+</div>
+</div>
+""",
         unsafe_allow_html=True
     )
 
 def section_faq():
     st.markdown(
         """
-        <div class="card">
-        <h3>FAQ</h3>
-        <details>
-          <summary><b>Why do Bloch spheres sometimes look identical?</b></summary>
-          <div>States like |0⟩ and |+⟩ may appear similar if the visualization library projects them similarly—ensure Qiskit is installed and view multiple qubits.</div>
-        </details>
-        <details>
-          <summary><b>What threshold indicates eavesdropping?</b></summary>
-          <div>In ideal BB84, an intercept-resend eavesdropper yields ~25% error on the sifted bits. Realistic channels tolerate only a few percent.</div>
-        </details>
-        <details>
-          <summary><b>Can I reproduce results?</b></summary>
-          <div>Use a fixed random seed in the Simulator to get repeatable runs.</div>
-        </details>
-        </div>
+<div class="card">
+<h3>FAQ</h3>
+<details>
+  <summary><b>Why do Bloch spheres sometimes look identical?</b></summary>
+  <div>States like |0⟩ and |+⟩ may appear similar if the visualization library projects them similarly—ensure Qiskit is installed and view multiple qubits.</div>
+</details>
+<details>
+  <summary><b>What threshold indicates eavesdropping?</b></summary>
+  <div>In ideal BB84, an intercept-resend eavesdropper yields ~25% error on the sifted bits. Realistic channels tolerate only a few percent.</div>
+</details>
+<details>
+  <summary><b>Can I reproduce results?</b></summary>
+  <div>Use a fixed random seed in the Simulator to get repeatable runs.</div>
+</details>
+</div>
         """,
         unsafe_allow_html=True,
     )
@@ -1132,11 +1125,11 @@ def section_faq():
 def section_contact():
     st.markdown(
         """
-        <div class="card">
-        <h3>Contact</h3>
-        <p class="muted">Have a feature request or found a bug? Drop a note below.</p>
-        </div>
-        """,
+<div class="card">
+<h3>Contact</h3>
+<p class="muted">Have a feature request or found a bug? Drop a note below.</p>
+</div>
+""",
         unsafe_allow_html=True,
     )
     with st.form("contact"):
@@ -1154,7 +1147,7 @@ def section_contact():
 def footer():
     st.markdown(
         """
-        <div class="footer">Built with ❤️ using Streamlit. Optional quantum backend powered by Qiskit Aer.</div>
+<div class="footer">Built with ❤️ using Streamlit. Optional quantum backend powered by Qiskit Aer.</div>
         """,
         unsafe_allow_html=True,
     )
@@ -1164,21 +1157,31 @@ def footer():
 # App Entrypoint
 # ---------------------------
 
+
+
 def main():
     header()
-    page = sidebar_nav()
+    st.set_page_config(
+        page_title="BB84 Quantum Key Distribution",
+        page_icon="🔐",
+        layout="wide",
+        initial_sidebar_state="expanded",
+    )
 
-    if page == "Home":
+    current_page = sidebar_nav()
+
+    # Page routing
+    if current_page == "Home":
         section_home()
-    elif page == "Simulator":
+    elif current_page == "Simulator":
         section_simulator()
-    elif page == "Theory":
+    elif current_page == "Theory":
         section_theory()
-    elif page == "Team":
+    elif current_page == "Team":
         section_team()
-    elif page == "FAQ":
+    elif current_page == "FAQ":
         section_faq()
-    elif page == "Contact":
+    elif current_page == "Contact":
         section_contact()
 
     footer()
