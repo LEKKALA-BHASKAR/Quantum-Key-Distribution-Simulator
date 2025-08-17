@@ -710,7 +710,8 @@ def plot_bloch_samples(alice_bits: List[int], alice_bases: List[str]):
                 ax = fig.add_subplot(111, projection='3d')
                 
                 # Customize Bloch sphere appearance
-                plot_bloch_multivector(statevector, ax=ax)
+                plot_bloch_multivector(statevector)
+                plt.show()
                 ax.set_title(f"Qubit {i+1}", y=1.08, fontsize=14, color='#0f172a')
                 
                 # Style adjustments
